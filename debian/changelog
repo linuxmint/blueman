@@ -1,3 +1,10 @@
+blueman (2.4.4+mint2) xia; urgency=medium
+
+  * Revert "Handle incomplete StatusNotifierWatchers"
+  * meson: Fix version
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 08 Jan 2025 16:14:52 +0000
+
 blueman (2.4.4+mint1) xia; urgency=medium
 
   * 2.4.4
