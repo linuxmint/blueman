@@ -5,7 +5,7 @@ from gi.repository import GLib
 import socket
 import subprocess
 import logging
-from blueman.Functions import have, get_local_interfaces
+import shutil  # Added for safe executable lookup
 from blueman.bluemantyping import GSignals
 
 
@@ -16,10 +16,11 @@ class DhcpClient(GObject.GObject):
         'error-occurred': (GObject.SignalFlags.NO_HOOKS, None, (int,)),
     }
 
-    COMMANDS = [
-        ["dhclient", "-e", "IF_METRIC=100", "-1"],
-        ["dhcpcd", "-m", "100"],
-        ["udhcpc", "-t", "20", "-x", "hostname", socket.gethostname(), "-n", "-i"]
+    # Fixed/safe paths for common DHCP clients (priority order)
+    DHCP_CLIENTS = [
+        "/usr/sbin/dhclient",
+        "/usr/sbin/dhcpcd",
+        "/usr/sbin/udhcpc",
     ]
 
     querying: List[str] = []
@@ -32,10 +33,22 @@ class DhcpClient(GObject.GObject):
         self._timeout = timeout
 
         self._command = None
-        for command in self.COMMANDS:
-            path = have(command[0])
-            if path:
-                self._command = [path] + command[1:] + [self._interface]
+        for client_path in self.DHCP_CLIENTS:
+            # Use shutil.which for safe, realpath-resolved lookup
+            resolved_path = shutil.which(client_path)
+            if resolved_path:
+                # Build command with resolved safe path
+                if resolved_path.endswith("dhclient"):
+                    self._command = [resolved_path, "-e", "IF_METRIC=100", "-1", self._interface]
+                elif resolved_path.endswith("dhcpcd"):
+                    self._command = [resolved_path, "-m", "100", self._interface]
+                elif resolved_path.endswith("udhcpc"):
+                    self._command = [
+                        resolved_path,
+                        "-t", "20",
+                        "-x", "hostname", socket.gethostname(),
+                        "-n", "-i", self._interface
+                    ]
                 break
 
     def run(self) -> None:
