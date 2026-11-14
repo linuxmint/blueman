@@ -1,3 +1,12 @@
+blueman (2.4.4+mint3) adrien; urgency=medium
+
+  * Update debian/control
+  * BluezAgent: Use a dialog for keyboard pairing
+  * BluezAgent: Don't highlight a digit before any is typed
+  * ManagerProgressbar: Add some padding above and below the progress bar
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 14 Nov 2026 14:15:43 +0000
+
 blueman (2.4.4+mint2) xia; urgency=medium
 
   * Revert "Handle incomplete StatusNotifierWatchers"
