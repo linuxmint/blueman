@@ -194,7 +194,7 @@ class BluezAgent(DbusService):
         self._devhandlerids[object_path] = dev.connect_signal("property-changed", self._on_device_property_changed)
 
         key = f"{passkey:06}"
-        if entered < len(key):
+        if 0 < entered < len(key):
             code = f"{key[:entered]}<b>{key[entered]}</b>{key[entered + 1:]}"
         else:
             code = key
