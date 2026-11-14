@@ -47,6 +47,8 @@ class ManagerProgressbar(GObject.GObject):
         eventbox.connect("button-press-event", self._on_clicked)
 
         self.progressbar.set_size_request(100, 15)
+        self.progressbar.set_margin_top(4)
+        self.progressbar.set_margin_bottom(4)
         self.progressbar.set_ellipsize(Pango.EllipsizeMode.END)
         self.progressbar.set_text(text)
         self.progressbar.set_show_text(True)
