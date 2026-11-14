@@ -4060,3 +4060,7 @@ msgstr "RfKill-tilan asettaminen vaatii lisäoikeuksia"
 
 #~ msgid "Uses libappindicator to show a statusicon"
 #~ msgstr "Näyttää tilakuvakkeen libappindicatorin avulla"
+
+#: blueman/main/applet/BluezAgent.py:180
+msgid "On the Bluetooth keyboard you are pairing, type this code, then press <b>Enter</b>:"
+msgstr "Kirjoita paritettavalla Bluetooth-näppäimistöllä tämä koodi ja paina sitten <b>Enter</b>:"

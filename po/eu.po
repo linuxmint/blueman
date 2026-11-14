@@ -3938,3 +3938,7 @@ msgstr "RfKill State ezartzeak pribilegioak behar dira"
 
 #~ msgid "Start configuration assistant for this device"
 #~ msgstr "Hasi konfigurazio laguntzailea gailu honentzat"
+
+#: blueman/main/applet/BluezAgent.py:180
+msgid "On the Bluetooth keyboard you are pairing, type this code, then press <b>Enter</b>:"
+msgstr "Parekatzen ari zaren Bluetooth teklatuan, idatzi kode hau eta sakatu ondoren <b>Enter</b>:"

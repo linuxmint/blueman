@@ -176,26 +176,36 @@ class BluezAgent(DbusService):
         if self.dialog:
             self.dialog.present()
 
+    def _show_pairing_dialog(self, object_path: str, code: str) -> None:
+        message = _("On the Bluetooth keyboard you are pairing, type this code, then press <b>Enter</b>:") \
+            + f'\n\n<span size="xx-large">{code}</span>'
+        if isinstance(self._notification, _NotificationDialog):
+            self._notification.set_message(message)
+        else:
+            self._close()
+            self._notification = _NotificationDialog("Bluetooth", message, 0, [("close", _("_Close"))],
+                                                     icon_name="blueman")
+            self._notification.props.text = Device(obj_path=object_path).display_name
+            self._notification.show()
+
     def _on_display_passkey(self, object_path: str, passkey: int, entered: int) -> None:
         logging.info(f"DisplayPasskey ({object_path}, {passkey:d} {entered:d})")
         dev = Device(obj_path=object_path)
         self._devhandlerids[object_path] = dev.connect_signal("property-changed", self._on_device_property_changed)
 
         key = f"{passkey:06}"
-        notify_message = _("Pairing passkey for") + f" {self.get_device_string(object_path)}: " \
-                                                    f"{key[:entered]}<b>{key[entered]}</b>{key[entered + 1:]}"
-        self._close()
-        self._notification = Notification("Bluetooth", notify_message, 0, icon_name="blueman")
-        self._notification.show()
+        if entered < len(key):
+            code = f"{key[:entered]}<b>{key[entered]}</b>{key[entered + 1:]}"
+        else:
+            code = key
+        self._show_pairing_dialog(object_path, code)
 
     def _on_display_pin_code(self, object_path: str, pin_code: str) -> None:
         logging.info(f'DisplayPinCode ({object_path}, {pin_code})')
         dev = Device(obj_path=object_path)
         self._devhandlerids[object_path] = dev.connect_signal("property-changed", self._on_device_property_changed)
 
-        notify_message = _("Pairing PIN code for") + f" {self.get_device_string(object_path)}: {pin_code}"
-        self._notification = Notification("Bluetooth", notify_message, 0, icon_name="blueman")
-        self._notification.show()
+        self._show_pairing_dialog(object_path, escape(pin_code))
 
     def _on_request_confirmation(self, object_path: str, passkey: Optional[int], ok: Callable[[], None],
                                  err: Callable[[BluezErrorCanceled], None]) -> None:

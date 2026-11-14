@@ -3883,3 +3883,7 @@ msgstr ""
 
 #~ msgid "Start configuration assistant for this device"
 #~ msgstr "بدء مساعد الضبط لهذا الجهاز"
+
+#: blueman/main/applet/BluezAgent.py:180
+msgid "On the Bluetooth keyboard you are pairing, type this code, then press <b>Enter</b>:"
+msgstr "على لوحة مفاتيح Bluetooth التي تقوم بإقرانها، اكتب هذا الرمز ثم اضغط <b>Enter</b>:"

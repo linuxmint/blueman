@@ -3606,3 +3606,7 @@ msgstr "Að setja RfKill-stöðu krefst aukinna heimilda"
 
 #~ msgid "Wrist-Worn"
 #~ msgstr "Á úlnlið"
+
+#: blueman/main/applet/BluezAgent.py:180
+msgid "On the Bluetooth keyboard you are pairing, type this code, then press <b>Enter</b>:"
+msgstr "Á Bluetooth-lyklaborðinu sem þú ert að para, sláðu inn þennan kóða og ýttu síðan á <b>Enter</b>:"

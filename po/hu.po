@@ -4066,3 +4066,7 @@ msgstr "Az RfKill állapot beállításához megfelelő jog szükséges"
 
 #~ msgid "Uses libappindicator to show a statusicon"
 #~ msgstr "Állapotikon megjelenítésére a libappindicator segítségével"
+
+#: blueman/main/applet/BluezAgent.py:180
+msgid "On the Bluetooth keyboard you are pairing, type this code, then press <b>Enter</b>:"
+msgstr "A most párosítandó Bluetooth-billentyűzeten írja be ezt a kódot, majd nyomja meg az <b>Enter</b> billentyűt:"

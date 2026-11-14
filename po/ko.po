@@ -3955,3 +3955,7 @@ msgstr "RfKill을 설정하려면 관리자 권한이 있어야 합니다"
 
 #~ msgid "Uses libappindicator to show a statusicon"
 #~ msgstr "상태 아이콘을 표시할 때 libappindicator 활용"
+
+#: blueman/main/applet/BluezAgent.py:180
+msgid "On the Bluetooth keyboard you are pairing, type this code, then press <b>Enter</b>:"
+msgstr "페어링 중인 Bluetooth 키보드에서 이 코드를 입력한 다음 <b>Enter</b> 키를 누르세요:"

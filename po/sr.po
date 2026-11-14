@@ -4003,3 +4003,7 @@ msgstr "За подешавање стања „РфУбиј“ потребна
 
 #~ msgid "Uses libappindicator to show a statusicon"
 #~ msgstr "Користи „libappindicator“ да покаже иконицу стања"
+
+#: blueman/main/applet/BluezAgent.py:180
+msgid "On the Bluetooth keyboard you are pairing, type this code, then press <b>Enter</b>:"
+msgstr "На Bluetooth тастатури коју упарујете унесите овај кôд, а затим притисните <b>Enter</b>:"

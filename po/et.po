@@ -3894,3 +3894,7 @@ msgstr "RfKill oleku seadistamiseks on vaja täiendavaid õigusi"
 
 #~ msgid "Uses libappindicator to show a statusicon"
 #~ msgstr "Kasutab olekuikooni näitamiseks libappindicator teeki"
+
+#: blueman/main/applet/BluezAgent.py:180
+msgid "On the Bluetooth keyboard you are pairing, type this code, then press <b>Enter</b>:"
+msgstr "Sisestage Bluetooth-klaviatuuril, mida paarite, see kood ja vajutage seejärel <b>Enter</b>:"

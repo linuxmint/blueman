@@ -4026,3 +4026,7 @@ msgstr "Mengatur Keadaan RfKill memerlukan hak khusus"
 
 #~ msgid "Uses libappindicator to show a statusicon"
 #~ msgstr "Menggunakan libappindicator untuk menampilkan ikon status"
+
+#: blueman/main/applet/BluezAgent.py:180
+msgid "On the Bluetooth keyboard you are pairing, type this code, then press <b>Enter</b>:"
+msgstr "Pada keyboard Bluetooth yang sedang Anda sambungkan, ketik kode ini lalu tekan <b>Enter</b>:"

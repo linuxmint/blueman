@@ -3605,3 +3605,7 @@ msgstr ""
 
 #~ msgid "_Remove..."
 #~ msgstr "_Verwyder..."
+
+#: blueman/main/applet/BluezAgent.py:180
+msgid "On the Bluetooth keyboard you are pairing, type this code, then press <b>Enter</b>:"
+msgstr "Tik hierdie kode op die Bluetooth-sleutelbord wat jy koppel en druk dan <b>Enter</b>:"

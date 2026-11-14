@@ -4026,3 +4026,7 @@ msgstr "Η ρύθμιση κατάστασης RfKill απαιτεί δικαι�
 #~ msgstr ""
 #~ "Χρησιμοποιεί τη βιβλιοθήκη libappindicator για να εμφανίσει ένα εικονίδιο "
 #~ "κατάστασης"
+
+#: blueman/main/applet/BluezAgent.py:180
+msgid "On the Bluetooth keyboard you are pairing, type this code, then press <b>Enter</b>:"
+msgstr "Στο πληκτρολόγιο Bluetooth με το οποίο πραγματοποιείτε ζεύξη, πληκτρολογήστε αυτόν τον κωδικό και μετά πατήστε <b>Enter</b>:"

@@ -3975,3 +3975,7 @@ msgstr ""
 
 #~ msgid "Uses libappindicator to show a statusicon"
 #~ msgstr "Utilizează libappindicator pentru a afișa o pictogramă de stare"
+
+#: blueman/main/applet/BluezAgent.py:180
+msgid "On the Bluetooth keyboard you are pairing, type this code, then press <b>Enter</b>:"
+msgstr "Pe tastatura Bluetooth pe care o asociați, tastați acest cod, apoi apăsați <b>Enter</b>:"

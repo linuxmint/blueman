@@ -3522,3 +3522,7 @@ msgstr ""
 #: data/configs/org.blueman.policy.in:38
 msgid "Setting RfKill State requires privileges"
 msgstr ""
+
+#: blueman/main/applet/BluezAgent.py:180
+msgid "On the Bluetooth keyboard you are pairing, type this code, then press <b>Enter</b>:"
+msgstr "Sur la Bluetooth-klavaro, kiun vi parigas, tajpu ĉi tiun kodon kaj poste premu <b>Enter</b>:"

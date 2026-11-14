@@ -3872,3 +3872,7 @@ msgstr ""
 
 #~ msgid "Uses libappindicator to show a statusicon"
 #~ msgstr "Го користи libappindicator за да ја прикаже статусната икона"
+
+#: blueman/main/applet/BluezAgent.py:180
+msgid "On the Bluetooth keyboard you are pairing, type this code, then press <b>Enter</b>:"
+msgstr "На Bluetooth тастатурата што ја спојувате, внесете го овој код и потоа притиснете <b>Enter</b>:"

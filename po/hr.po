@@ -4073,3 +4073,7 @@ msgstr "Postavljanje RfKill stanja zahtijeva dozvole"
 
 #~ msgid "Uses libappindicator to show a statusicon"
 #~ msgstr "Koristi libappindicator za prikazivanje ikone stanja"
+
+#: blueman/main/applet/BluezAgent.py:180
+msgid "On the Bluetooth keyboard you are pairing, type this code, then press <b>Enter</b>:"
+msgstr "Na Bluetooth tipkovnici koju uparujete upišite ovaj kôd, a zatim pritisnite <b>Enter</b>:"
